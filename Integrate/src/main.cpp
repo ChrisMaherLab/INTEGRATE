@@ -41,7 +41,7 @@ int usage()
 int main(int argc, char * argv[])
 {
 
-	cout<<"INTEGRATE version 0.2.5"<<endl;
+	cout<<"INTEGRATE version 0.2.6"<<endl;
 
 	InitialIntChar();
 

@@ -51,7 +51,7 @@ set(LIB_SOURCES
 )
 
 add_library(integrate ${LIB_SOURCES})
-target_link_libraries(integrate ${Samtools_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(integrate ${Samtools_LIBRARIES})
 
 add_executable(integrate-bin main.cpp)
 target_link_libraries(integrate-bin integrate ${LIBDIVSUFSORT_LIBRARIES})

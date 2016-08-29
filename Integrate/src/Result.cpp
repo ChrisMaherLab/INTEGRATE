@@ -1796,6 +1796,11 @@ int Result::getAllJunctionsStep4(Gene& g, Reference & ref) {
                         fjt.p5=j1[x];
                         fjt.p3=j2[y];
 
+                        if(fjt.p5.strand==1)
+                            fjt.p5.pos1=fjt.p5.pos1+1;
+                        if(fjt.p3.strand==0)
+                            fjt.p3.pos1=fjt.p3.pos1+1;
+
                     }
                     else if(j1[x].is5p==0 && j2[y].is5p==1)
                     {
@@ -1804,7 +1809,10 @@ int Result::getAllJunctionsStep4(Gene& g, Reference & ref) {
                         getRefExonSeq(ref,j1[x].tid,j1[x].pos1+1,j1[x].pos2,j1[x].strand,fjt.seq2);
                         fjt.p5=j2[y];
                         fjt.p3=j1[x];
-
+                        if(fjt.p5.strand==1)
+                            fjt.p5.pos1=fjt.p5.pos1+1;
+                        if(fjt.p3.strand==0)
+                            fjt.p3.pos1=fjt.p3.pos1+1;
                     }
                     fjtvec2.push_back(fjt);
 
